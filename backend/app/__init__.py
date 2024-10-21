@@ -13,6 +13,7 @@ from datetime import timedelta
 load_dotenv()
 db = SQLAlchemy()
 
+
 class Config:
     """App configuration variables."""
     if os.getenv("FLASK_ENV") == "development":

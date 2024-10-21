@@ -14,7 +14,8 @@ const Sidebar = ({ categories, priceRanges, filterByCategory, filterByPriceRange
           </h4>
           <ul>
             <li>
-              <a href="#" onClick={() => filterByCategory(null)}>All</a> <span>({categories.reduce((acc, [_, count]) => acc + count, 0)})</span>
+              <a href="#" onClick={() => filterByCategory(null)}>All</a>
+              <span>({categories.reduce((acc, [_, count]) => acc + count, 0)})</span>
             </li>
             {categories.map(([category, count], index) => (
               <li key={index}>
