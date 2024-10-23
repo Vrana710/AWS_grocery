@@ -2,6 +2,10 @@ import React from 'react';
 import "./Footer.css";
 import logo from "../Assets/Frame2.png";
 import payment from "../Assets/payment.png";
+import payment_visa from "../Assets/pay_visa.png";
+import payment_amex from "../Assets/pay_american-express.png";
+import payment_google from "../Assets/pay_google.png";
+import payment_mastercard from "../Assets/pay_mastercard.png";
 import vector1 from "../Assets/Vector1.png";
 import vector2 from "../Assets/Vector2.png";
 import vector3 from "../Assets/Vector3.png";
@@ -58,7 +62,10 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className='footer-payment-container'>
-                    <img src={payment} alt="Payment Methods" className='footer-payment' />
+                     <img src={payment_visa} alt="Payment Methods" className='footer-payment' />
+                     <img src={payment_amex} alt="Payment Methods" className='footer-payment' />
+                     <img src={payment_mastercard} alt="Payment Methods" className='footer-payment' />
+                     <img src={payment_google} alt="Payment Methods" className='footer-payment' />
                 </div>
             </div>
 
