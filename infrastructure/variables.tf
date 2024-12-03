@@ -1,4 +1,5 @@
 # variables.tf
+
 variable "instance_type" {
   description = "Allowed EC2 instance types"
   type        = string
@@ -29,4 +30,14 @@ variable "subnet_cidr" {
   description = "CIDR block for the subnet"
   type        = list(string)
   default     = ["10.0.1.0/24", "10.0.2.0/24", "10.0.3.0/24"]
+}
+
+variable "db_username" {
+  description = "Database username"
+  type        = string
+}
+
+variable "db_password" {
+  description = "Database password"
+  type        = string
 }

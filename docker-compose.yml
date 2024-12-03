@@ -17,7 +17,7 @@ services:
       dockerfile: backend/Dockerfile
     container_name: backend
     ports:
-      - "5000:5000"
+      - "5001:5001"
     env_file:
       - backend/.env
     networks:
@@ -29,7 +29,7 @@ services:
     command: >
       sh -c 'while [ ! -f /app/../frontend/build/BUILD_COMPLETE ]; do
       echo "Waiting for frontend build..."; sleep 5; done &&
-      gunicorn --bind 0.0.0.0:5000 run:app'
+      gunicorn --bind 0.0.0.0:5001 run:app'
 
 volumes:
   frontend-build: {}

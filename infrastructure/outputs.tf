@@ -19,7 +19,7 @@ output "db_instance_id" {
   value       = aws_db_instance.postgres_instance.id
 }
 
-output "route53_zone_id" {
-  description = "The ID of the Route53 hosted zone"
-  value       = aws_route53_zone.main_zone.zone_id
-}
+#output "route53_zone_id" {
+#  description = "The ID of the Route53 hosted zone"
+#  value       = aws_route53_zone.main_zone.zone_id
+#}

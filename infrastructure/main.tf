@@ -40,13 +40,20 @@ resource "aws_security_group" "main_sg" {
   }
 
   ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
+
+  ingress {
     from_port   = 5432
     to_port     = 5432
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  egress {
+  ingress {
     from_port   = 0
     to_port     = 0
     protocol    = "-1"
@@ -76,7 +83,7 @@ resource "aws_db_subnet_group" "main_subnet_group" {
 
 # EC2 Instance
 resource "aws_instance" "web_instance" {
-  ami           = "ami-0c55b159cbfafe1f0" # Update with a region-appropriate AMI
+  ami           = "ami-017095afb82994ac7" # Update with a region-appropriate AMI
   instance_type = var.instance_type
   subnet_id     = aws_subnet.subnet_a.id
   security_groups = [aws_security_group.main_sg.name]
